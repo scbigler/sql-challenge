@@ -42,7 +42,8 @@ CREATE TABLE "employees" (
 
 CREATE TABLE "salaries" (
     "emp_no" int   NOT NULL,
-    "salary" int   NOT NULL
+    "salary" int   NOT NULL,
+	PRIMARY KEY (salary, emp_no)
 );
 
 ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_dept_emp_emp_no" FOREIGN KEY("emp_no")
